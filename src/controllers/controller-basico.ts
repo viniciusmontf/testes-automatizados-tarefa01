@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { IUseCase } from '../contracts/iusecase';
-import { IEntradaUseCaseBasico, ISaidaUseCaseBasico } from '../domain/usecases/usecase-basico';
+import { IEntradaUseCaseBasico, ISaidaUseCaseBasico } from '../domain/usecases/ConsultarHorario';
 
 export interface IController {
     handle(req: Request, resp: Response): Promise<void>;

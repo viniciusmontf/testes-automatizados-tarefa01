@@ -1,6 +1,6 @@
 import { IUseCase } from "../../src/contracts/iusecase";
 import { ControllerBasico } from "../../src/controllers/controller-basico";
-import { IEntradaUseCaseBasico, ISaidaUseCaseBasico } from "../../src/domain/usecases/usecase-basico";
+import { IEntradaUseCaseBasico, ISaidaUseCaseBasico } from "../../src/domain/usecases/ConsultarHorario";
 import { Request, Response } from "express";
 
 class UseCaseFake implements IUseCase<IEntradaUseCaseBasico, ISaidaUseCaseBasico> {

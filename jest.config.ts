@@ -3,9 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
-
-const config: Config = {
+/** @type {import('jest').Config} */
+const config = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -13,7 +12,7 @@ const config: Config = {
   // bail: 0,
 
   // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "/tmp/jest_rs",
+  // cacheDirectory: "C:\\Users\\Vinícius Monteiro\\AppData\\Local\\Temp\\jest",
 
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
@@ -29,7 +28,7 @@ const config: Config = {
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
-  //   "/node_modules/"
+  //   "\\\\node_modules\\\\"
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
@@ -102,7 +101,7 @@ const config: Config = {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  preset: "ts-jest",
+  // preset: undefined,
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -123,13 +122,12 @@ const config: Config = {
   // restoreMocks: false,
 
   // The root directory that Jest should scan for tests and modules within
-  rootDir: "./",
+  // rootDir: undefined,
 
   // A list of paths to directories that Jest should use to search for files in
-  roots: [
-    "<rootDir>/src",
-    "<rootDir>/tests"
-  ],
+  // roots: [
+  //   "<rootDir>"
+  // ],
 
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
@@ -163,7 +161,7 @@ const config: Config = {
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
-  //   "/node_modules/"
+  //   "\\\\node_modules\\\\"
   // ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
@@ -180,8 +178,8 @@ const config: Config = {
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
-  //   "/node_modules/",
-  //   "\\.pnp\\.[^\\/]+$"
+  //   "\\\\node_modules\\\\",
+  //   "\\.pnp\\.[^\\\\]+$"
   // ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
@@ -194,7 +192,7 @@ const config: Config = {
   // watchPathIgnorePatterns: [],
 
   // Whether to use watchman for file crawling
-  watchman: true,
+  // watchman: true,
 };
 
-export default config;
+module.exports = config;
