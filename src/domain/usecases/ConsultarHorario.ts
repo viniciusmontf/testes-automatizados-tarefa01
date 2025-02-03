@@ -1,12 +1,12 @@
 import { IUseCase } from "../../contracts/iusecase";
 
 // Definindo as Interfaces de Entrada e Saida
-interface IConsultarHorarioEntrada {
+export interface IConsultarHorarioEntrada {
     matriculaId: string;
     cursoId: string;
 }
 
-interface IHorarioAula {
+export interface IHorarioAula {
     diaSemana: string;
     horarioInicio: string;
     horarioFim: string;
@@ -15,7 +15,7 @@ interface IHorarioAula {
     sala: string;
 }
 
-interface IConsultaHorarioSaida {
+export interface IConsultarHorarioSaida {
     horarios: IHorarioAula[];
     nomeAluno: string;
     nomeCurso: string;
@@ -23,7 +23,7 @@ interface IConsultaHorarioSaida {
 }
 
 // Classe principal que implementa o UseCase
-export class ConsultarHorario implements IUseCase<IConsultarHorarioEntrada, IConsultaHorarioSaida> {
+export class ConsultarHorario implements IUseCase<IConsultarHorarioEntrada, IConsultarHorarioSaida> {
 
     // Simular uma base de dados de matriculas
     private matricula = [
@@ -55,7 +55,7 @@ export class ConsultarHorario implements IUseCase<IConsultarHorarioEntrada, ICon
         },
     ];
 
-    async perform(entrada: IConsultarHorarioEntrada): Promise<IConsultaHorarioSaida> {
+    async perform(entrada: IConsultarHorarioEntrada): Promise<IConsultarHorarioSaida> {
 
         // Verificar se a matricula existe
         const matricula = this.matricula.find(m => m.matriculaId === entrada.matriculaId);

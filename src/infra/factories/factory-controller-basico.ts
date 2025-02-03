@@ -1,4 +1,4 @@
-import { ControllerBasico } from "../../controllers/controller-basico";
+import { ControllerBasico } from "../../controllers/ConsultarHorarioController";
 import { UseCaseBasico } from "../../domain/usecases/ConsultarHorario";
 
 export function factoryControllerBasico() {

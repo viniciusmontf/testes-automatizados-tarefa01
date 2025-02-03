@@ -1,5 +1,5 @@
 import { IUseCase } from "../../src/contracts/iusecase";
-import { ControllerBasico } from "../../src/controllers/controller-basico";
+import { ControllerBasico } from "../../src/controllers/ConsultarHorarioController";
 import { IEntradaUseCaseBasico, ISaidaUseCaseBasico } from "../../src/domain/usecases/ConsultarHorario";
 import { Request, Response } from "express";
 
